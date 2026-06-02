@@ -1,0 +1,85 @@
+/* Reset padrão Alura */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f4; /* Tom de verde bem claro */
+    color: #333333;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2e7d32; /* Verde Agro */
+}
+
+.cabecalho-logo {
+    height: 50px;
+}
+
+.cabecalho-menu-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.cabecalho-menu-item:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.conteudo-principal-texto {
+    max-width: 50%;
+}
+
+.conteudo-principal-titulo {
+    font-size: 40px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.conteudo-principal-subtitulo {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.conteudo-principal-botao {
+    background-color: #ff9800; /* Laranja para destaque */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.conteudo-principal-imagem {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
