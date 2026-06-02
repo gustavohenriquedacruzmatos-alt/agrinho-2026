@@ -32,9 +32,9 @@ De acordo com o cronograma das aulas da Alura, as seguintes tecnologias foram ap
 ---
 
 ## 👥 Autor
-* **Seu Nome Completo**
-* Escola/Colégio: [Nome da sua escola]
-* Série/Turma: [Sua turma]
+* **Gustavo henrique da cruz matos**
+* Escola/Colégio: [Colégio estadual nossa senhora de Lourdes]
+* Série/Turma: [Primeiro ano do ensino médio]
 
 ---
 Layout baseado nas instruções e componentes do curso de Front-End da Alura. 🍃
