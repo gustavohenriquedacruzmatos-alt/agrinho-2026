@@ -1,0 +1,230 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (PALETA SERTANEJA)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Tons baseados na terra batida, mandacaru, sol e couro */
+    --bg-color: #FDFBF7;       /* Areia claro / Papiro */
+    --text-color: #3E2723;     /* Marrom escuro (Couro/Terra molhada) */
+    --accent-color: #2E7D32;   /* Verde Mandacaru */
+    --accent-hover: #E67E22;   /* Laranja Barro / Cerâmica */
+    --card-bg: #F5EBE0;        /* Bege suave para blocos */
+    --border-color: #3E2723;
+    --font-main: 'Space Grotesk', sans-serif;
+}
+
+/* Cores para o Modo Escuro (Sertão à Noite) */
+body.dark-theme {
+    --bg-color: #1A120B;       /* Marrom quase preto (Noite profunda) */
+    --text-color: #F5EBE0;     /* Texto claro/Areia */
+    --accent-color: #81C784;   /* Verde mais suave para contraste */
+    --accent-hover: #FFB74D;   /* Amarelo Sol poente */
+    --card-bg: #2C1E11;        /* Bloco marrom escuro */
+    --border-color: #F5EBE0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 0 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HERO)
+   ========================================================================== */
+.hero {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    margin-top: 40px;
+    padding-bottom: 40px;
+    transition: border-color 0.4s ease;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-top: 15px;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+/* Botão de Acessibilidade (Modo Escuro) */
+.btn-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: var(--border-color);
+    color: var(--bg-color);
+}
+
+/* ==========================================================================
+   3. SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.section-context {
+    padding: 60px 0 40px 0;
+}
+
+.section-context p {
+    font-size: 1.2rem;
+    max-width: 750px;
+}
+
+/* ==========================================================================
+   4. GRID DE SOLUÇÕES (CARDS)
+   ========================================================================== */
+.section-solutions {
+    padding: 40px 0;
+}
+
+.grid-solutions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 4px;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. GALERIA DE IMAGENS
+   ========================================================================== */
+.section-gallery {
+    padding: 40px 0 60px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: sepia(25px) contrast(95%); /* Toque quente que lembra o clima do Nordeste */
+    transition: filter 0.3s ease;
+}
+
+.img-container img:hover {
+    filter: sepia(0%) contrast(100%); /* Revela as cores originais ao passar o mouse */
+}
+
+.img-caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: left;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   6. RODAPÉ E CRÉDITOS
+   ========================================================================== */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px 0;
+    border-top: 1px solid var(--card-bg);
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.credits {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr; /* Transforma a galeria em uma coluna única no celular */
+    }
+
+    .img-container img {
+        height: 220px; /* Diminui a altura da imagem para telas menores */
+    }
+    
+    .container {
+        padding: 20px 0;
+    }
+}
